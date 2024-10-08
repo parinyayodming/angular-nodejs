@@ -1,0 +1,32 @@
+<div class="container mt-4">
+  <h2>
+    {{ user_id ? "Update" : "Create" }} User
+  </h2>
+  <form (submit)="submitForm()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        [(ngModel)]="user.name"
+        name="name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        class="form-control"
+        [(ngModel)]="user.email"
+        name="email"
+        required
+      />
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">
+      {{ user_id ? "Update" : "Create" }}
+    </button>
+  </form>
+</div>
